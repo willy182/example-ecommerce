@@ -1,5 +1,9 @@
 # Example-Ecommerce
 
+## Generate ssh key
+- ssh-keygen
+- enter file in which to save the key: configs/rsa/app
+
 ## Prepare service
 ```
 $ docker compose up
