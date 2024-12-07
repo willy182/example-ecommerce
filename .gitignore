@@ -1,0 +1,9 @@
+bin
+vendor
+main_service.go
+example-ecommerce
+coverage.txt
+mocks
+.env
+.vscode
+database.sql

@@ -1,0 +1,40 @@
+{
+     "GoVersion": "1.23",
+     "Version": "v1.18.4",
+     "ServiceName": "example-ecommerce",
+     "PackagePrefix": "example-ecommerce",
+     "ProtoSource": "example-ecommerce/api/proto",
+     "Owner": "",
+     "License": "",
+     "Year": 2024,
+     "IsMonorepo": false,
+     "RestHandler": true,
+     "GRPCHandler": false,
+     "GraphQLHandler": false,
+     "FiberRestHandler": true,
+     "KafkaHandler": false,
+     "SchedulerHandler": false,
+     "RedisSubsHandler": false,
+     "TaskQueueHandler": true,
+     "PostgresListenerHandler": false,
+     "RabbitMQHandler": false,
+     "IsWorkerActive": true,
+     "RedisDeps": false,
+     "SQLDeps": true,
+     "MongoDeps": false,
+     "SQLUseGORM": true,
+     "ArangoDeps": false,
+     "SQLDriver": "postgres",
+     "WorkerPlugins": null,
+     "Modules": [
+          {
+               "ModuleName": "order"
+          },
+          {
+               "ModuleName": "payment"
+          },
+          {
+               "ModuleName": "user"
+          }
+     ]
+}

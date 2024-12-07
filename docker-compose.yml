@@ -1,0 +1,27 @@
+services:
+  db:
+    platform: linux/x86_64
+    image: postgres:14.10-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: P455w0RD
+      POSTGRES_DB: example
+    ports:
+      - 5436:5432
+    expose:
+      - 5436
+    volumes:
+      - db:/var/lib/postgresql/data
+      # Load database schema from ./database.sql
+      # If you want to reload new database schema, you need to execute
+      # `docker-compose down --volumes` first to remove the volume.
+      - ./database.sql:/docker-entrypoint-initdb.d/database.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+volumes:
+  db:
+    driver: local

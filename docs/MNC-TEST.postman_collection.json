@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "37ffa0f7-3683-465f-9077-3a98d7d5ab34",
+		"name": "MNC-TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "2078132"
+	},
+	"item": [
+		{
+			"name": "Transactions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzM2MDY2MjksImlhdCI6MTczMzU5OTQyOSwianRpIjoiYmUxYTBmOWQ4Y2JkM2YxN2NlYzNiY2JjZTAwYmQyY2Y3MTRiNGEzZSIsInBob25lX251bWJlciI6IjA5ODc2NTQzMjEiLCJzdWIiOiJkYjZhNDUzNS1lNTdlLTQxODktYWU3MC05OTBhNDk4MGIwZTkifQ.Q9OK5gafxT4fhWnqhwAtluktfN8AsmFC1e3qxJV9ItbRjGi1CWYiQPs-IwXaq3CS-_U23nnELAXkYcaH7Z6yZ1kdv9Jw4Kq6zQ2oAX7TX8lMd7LbW293Ebl3xGKDhdtqYwWQYXKFyNxIDXVAU14j6pl648MYC74_E2k82WCLOio"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"target_user\": \"2b219add-2b54-4436-a5f2-3c1259ba74ad\",\n    \"amount\": 25000,\n    \"remarks\": \"beli pulsa\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/transactions",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "kia",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "imd",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "people_id",
+							"value": "d0b86f65-a6f7-4234-8348-55b8eebe5563,72cb8981-12a7-4205-8b12-0eaef4c342db,30bcf00e-8990-4691-b3cc-74cac541afa4,eb2aabf7-5cef-441f-bdd6-36981043127d,96cc0592-ee6d-4fac-bc52-43bbe2d19ff0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzM2MDYxNzUsImlhdCI6MTczMzU5ODk3NSwianRpIjoiZmY1ZDBiMDc5MjM3ZjRhOWU3ZWIwZTBjYTRkOTk3MzU1NGM0YTdhNyIsInBob25lX251bWJlciI6IjEyMzQ1Njc4OTAiLCJzdWIiOiJjN2M2N2Y1Mi1jM2FmLTQxMmItOTNmNi0yOTlmMzZjMzFmM2IifQ.gkWkzQ6hdjQmpnq1jjVBmWipcVjeriU3zNUzNta67ghkrf7jOkCw6XKOyfjEjYArEgnK0SG-tr7CxSmPQu9HAksmBb7pDpHFkfSQSloGjkBjnKp8d3DFRby2R2eG7TpRmXRnlKweXomdmu_6Qf1aCm3inkT7YvsDv4vFAGQZtjc"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"target_user\": \"db6a4535-e57e-4189-ae70-990a4980b0e9\",\n    \"amount\": 50000,\n    \"remarks\": \"bayar utang ke istri\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/transfer",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"transfer"
+					],
+					"query": [
+						{
+							"key": "kia",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "imd",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "people_id",
+							"value": "d0b86f65-a6f7-4234-8348-55b8eebe5563,72cb8981-12a7-4205-8b12-0eaef4c342db,30bcf00e-8990-4691-b3cc-74cac541afa4,eb2aabf7-5cef-441f-bdd6-36981043127d,96cc0592-ee6d-4fac-bc52-43bbe2d19ff0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzM2MDYxNzUsImlhdCI6MTczMzU5ODk3NSwianRpIjoiZmY1ZDBiMDc5MjM3ZjRhOWU3ZWIwZTBjYTRkOTk3MzU1NGM0YTdhNyIsInBob25lX251bWJlciI6IjEyMzQ1Njc4OTAiLCJzdWIiOiJjN2M2N2Y1Mi1jM2FmLTQxMmItOTNmNi0yOTlmMzZjMzFmM2IifQ.gkWkzQ6hdjQmpnq1jjVBmWipcVjeriU3zNUzNta67ghkrf7jOkCw6XKOyfjEjYArEgnK0SG-tr7CxSmPQu9HAksmBb7pDpHFkfSQSloGjkBjnKp8d3DFRby2R2eG7TpRmXRnlKweXomdmu_6Qf1aCm3inkT7YvsDv4vFAGQZtjc"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 23000,\n    \"remarks\": \"belanja di tokopedia\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/pay",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"pay"
+					],
+					"query": [
+						{
+							"key": "kia",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "imd",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "people_id",
+							"value": "d0b86f65-a6f7-4234-8348-55b8eebe5563,72cb8981-12a7-4205-8b12-0eaef4c342db,30bcf00e-8990-4691-b3cc-74cac541afa4,eb2aabf7-5cef-441f-bdd6-36981043127d,96cc0592-ee6d-4fac-bc52-43bbe2d19ff0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Topup",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzM2MDYxNzUsImlhdCI6MTczMzU5ODk3NSwianRpIjoiZmY1ZDBiMDc5MjM3ZjRhOWU3ZWIwZTBjYTRkOTk3MzU1NGM0YTdhNyIsInBob25lX251bWJlciI6IjEyMzQ1Njc4OTAiLCJzdWIiOiJjN2M2N2Y1Mi1jM2FmLTQxMmItOTNmNi0yOTlmMzZjMzFmM2IifQ.gkWkzQ6hdjQmpnq1jjVBmWipcVjeriU3zNUzNta67ghkrf7jOkCw6XKOyfjEjYArEgnK0SG-tr7CxSmPQu9HAksmBb7pDpHFkfSQSloGjkBjnKp8d3DFRby2R2eG7TpRmXRnlKweXomdmu_6Qf1aCm3inkT7YvsDv4vFAGQZtjc"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 100000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/topup",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"topup"
+					],
+					"query": [
+						{
+							"key": "kia",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "imd",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "people_id",
+							"value": "d0b86f65-a6f7-4234-8348-55b8eebe5563,72cb8981-12a7-4205-8b12-0eaef4c342db,30bcf00e-8990-4691-b3cc-74cac541afa4,eb2aabf7-5cef-441f-bdd6-36981043127d,96cc0592-ee6d-4fac-bc52-43bbe2d19ff0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone_number\": \"0987654321\",\n    \"pin\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"login"
+					],
+					"query": [
+						{
+							"key": "kia",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "imd",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "people_id",
+							"value": "d0b86f65-a6f7-4234-8348-55b8eebe5563,72cb8981-12a7-4205-8b12-0eaef4c342db,30bcf00e-8990-4691-b3cc-74cac541afa4,eb2aabf7-5cef-441f-bdd6-36981043127d,96cc0592-ee6d-4fac-bc52-43bbe2d19ff0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"mawar\",\n    \"last_name\": \"safitri\",\n    \"phone_number\": \"0987654321\",\n    \"address\": \"Pondok Cipta Blok G.18\",\n    \"pin\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/v1/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"register"
+					],
+					"query": [
+						{
+							"key": "kia",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "imd",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "people_id",
+							"value": "d0b86f65-a6f7-4234-8348-55b8eebe5563,72cb8981-12a7-4205-8b12-0eaef4c342db,30bcf00e-8990-4691-b3cc-74cac541afa4,eb2aabf7-5cef-441f-bdd6-36981043127d,96cc0592-ee6d-4fac-bc52-43bbe2d19ff0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
